@@ -9,10 +9,23 @@ def check_upc(cursor, upc):
     return cursor.rowcount
 
 def get_medium_id(cursor, medium):
-    "SELECT medium_id from medium where name = {medium}"
+    cursor.execute("""SELECT medium_id from medium where name = %s""", medium)
+    if not cursor.countrows:
+        cursor.execute("""INSERT INTO medium (name) VALUES (%s)""", medium)
+        cursor.execute("""SELECT LAST_INSERT_ID()""")
+    
+    return cursor.fetchone()[0]
 
-def get_label_id(cursor, label):
+def get_label_id(cursor, label, distributor):
     pass
+
+def get_distributor_id(cursor, distributor):
+    cursor.execute("""SELECT distributor_id from medium where distributor_name = %s""", medium)
+    if not cursor.countrows:
+        raise ValueError(f"Could not find distributor: {distributor} in database")
+    
+    
+    return cursor.fetchone()[0]
 
 def import_naxos():
     title, upc, medium, cd_number, composer, artist, year, label = row
