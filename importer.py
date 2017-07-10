@@ -16,7 +16,7 @@ def get_medium_id(cursor, medium):
     return cursor.fetchone()[0]
 
 def get_label_id(cursor, label, distributor_id):
-    cursor.execute("""SELECT label_id from label where name = %s""", (label,))
+    cursor.execute("""SELECT label_id from label where label_name = %s""", (label,))
     if not cursor.rowcount:
         cursor.execute("""INSERT INTO label (label_name, distributor_id) VALUES (%s, %s)""", (label, distributor_id))
         cursor.execute("""SELECT LAST_INSERT_ID()""")
