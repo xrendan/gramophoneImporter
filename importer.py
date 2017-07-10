@@ -112,5 +112,3 @@ if __name__ == "__main__":
             for row in tsvin:
                 import_naxos(c, row)
 
-add_to_db(c, "TEST", 123456, 2, "123L", "BaCH", "PATH", 2017, 310151, 23, 12.99, 21.99)
-
