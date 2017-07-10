@@ -30,7 +30,7 @@ def get_distributor_id(cursor, distributor):
     else:
         return cursor.fetchone()[0]
 
-def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label, distributor):
+def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id):
     cursor.execute("""INSERT INTO inventory 
                    (cd_title,
                     medium_id,
@@ -39,6 +39,8 @@ def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
                     artist,
                     composer,
                     catalogue_listing_year,
+                    label_id,
+                    distributor_id,
                     entered_on, 
                     updated)
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW()""",
