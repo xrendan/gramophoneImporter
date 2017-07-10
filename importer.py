@@ -9,7 +9,7 @@ def check_upc(cursor, upc):
 
 def get_medium_id(cursor, medium):
     cursor.execute("""SELECT medium_id from medium where name = %s""", (medium,))
-    if not cursor.countrows:
+    if not cursor.rowcount:
         cursor.execute("""INSERT INTO medium (name) VALUES (%s)""", (medium,))
         cursor.execute("""SELECT LAST_INSERT_ID()""")
     
@@ -17,7 +17,7 @@ def get_medium_id(cursor, medium):
 
 def get_label_id(cursor, label, distributor_id):
     cursor.execute("""SELECT label_id from label where distributor_name = %s""", (label,))
-    if not cursor.countrows:
+    if not cursor.rowcount:
         cursor.execute("""INSERT INTO label (label_name, distributor_id) VALUES (%s, %s)""", (label, distributor_id))
         cursor.execute("""SELECT LAST_INSERT_ID()""")
     else:
@@ -25,7 +25,7 @@ def get_label_id(cursor, label, distributor_id):
 
 def get_distributor_id(cursor, distributor):
     cursor.execute("""SELECT distributor_id from distributor where distributor_name = %s""", (distributor,))
-    if not cursor.countrows:
+    if not cursor.rowcount:
         raise ValueError(f"Could not find distributor: {distributor} in database")
     else:
         return cursor.fetchone()[0]
