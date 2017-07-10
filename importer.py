@@ -1,5 +1,8 @@
 import MySQLdb
 
+db = MySQLdb.connect("localhost", "root", "76trombones", "weberp")
+c = db.cursor()
+
 def check_upc(cursor, upc):
     cursor.execute("""SELECT upc from inventory WHERE upc = %s""", (upc,))
     return cursor.rowcount
@@ -78,10 +81,6 @@ def import_naxos(cursor, row):
 if __name__ == "__main__":
     import csv
     from sys import argv
-    
-
-    db = MySQLdb.connect("localhost", "root", "76trombones", "weberp")
-    c = db.cursor()
 
     filename = argv[1]
     with open(argv[1], 'r', encoding='latin_1') as tsvfile:
