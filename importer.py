@@ -60,8 +60,8 @@ def update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
                 catalogue_listing_year = %s,
                 label_id = %s,
                 distributor_id = %s,
-                updated = NOW(),
-                WHERE upc = %s""", 
+                updated = NOW()
+                WHERE upc = %s """, 
                 (title, medium_id, cd_number, artist, composer, year, label_id, distributor_id, upc))
     
     if not cursor.rowcount:
