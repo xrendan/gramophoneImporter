@@ -13,9 +13,10 @@ def get_medium_id(cursor, medium):
     return cursor.fetchone()[0]
 
 def get_label_id(cursor, label, distributor_id):
-    cursor.execute("""SELECT label_id from label where distributor_name = %s""", medium)
+    cursor.execute("""SELECT label_id from label where distributor_name = %s""", label)
     if not cursor.countrows:
-        raise ValueError(f"Could not find distributor: {distributor} in database")
+        cursor.execute("""INSERT INTO label (label_name, distributor_id) VALUES (%s, %s)""", label, distributor_id)
+        cursor.execute("""SELECT LAST_INSERT_ID()""")
     else:
         return cursor.fetchone()[0]
 
