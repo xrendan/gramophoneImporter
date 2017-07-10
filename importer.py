@@ -81,7 +81,8 @@ def import_naxos(cursor, row):
     if check_upc(cursor, upc):
         update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
     else:
-        add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        # add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        pass
 
 def get_sales_price(cost):
     return int(cost * 1.67 + 0.05) - 0.01
@@ -111,6 +112,4 @@ if __name__ == "__main__":
         if filename == "naxos.txt":
             for row in tsvin:
                 import_naxos(c, row)
-
-update_db(c, "TEST", 123456, 2, "123L", "BACH", "PATH", 2017, 310151, 23, 13.99, 21.99)
 
