@@ -30,7 +30,7 @@ def get_distributor_id(cursor, distributor):
     else:
         return cursor.fetchone()[0]
 
-def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id):
+def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price):
     cursor.execute("""INSERT INTO inventory 
                    (cd_title,
                     medium_id,
@@ -47,8 +47,10 @@ def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
                     (title, medium_id, cd_number, upc, artist, composer, year, label_id, distributor_id))
     if not cursor.rowcount:
         print(f"failed insert on upc {upc}")
+    else:
+        add_pricing(cursor, cost, price)
 
-def update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label, distributor):
+def update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price):
     cursor.execute("""UPDATE inventory SET
                 cd_title = %s,
                 medium_id = %s,
@@ -64,21 +66,40 @@ def update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
     
     if not cursor.rowcount:
         print(f"failed update on upc {upc}")
+    else:
+        update_pricing(cursor, cost, price)
 
 def import_naxos(cursor, row):
-    title, upc, medium, cd_number, composer, artist, year, label = row
+    title, upc, medium, cd_number, composer, artist, year, cost, label = row
     distributor = "Naxos"
 
     distributor_id = get_distributor_id(cursor, distributor)
     label_id = get_label_id(cursor, label, distributor_id)
     medium_id = get_medium_id(cursor, medium)
+    price = get_sales_price(cost)
 
     if check_upc(cursor, upc):
-        update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label, distributor)
+        update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        cursor
     else:
-        add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label, distributor)
+        add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+
+def get_sales_price(cost):
+    return int(cost * 1.67 + 0.05) - 0.01
 
 
+def update_pricing(cursor, cost, price):
+    cursor.execute("""UPDATE inventory_pricing SET
+                unit_cost = %s,
+                unit_sell = %s
+                WHERE inventory_id = LAST_INSERT_ID(),""",
+                (cost, price))
+
+def add_pricing(cursor,):
+    cursor.execute("""INSERT INTO inventory_pricing 
+        (inventory_id, unit_cost, unit_sell 
+        VALUES (LAST_INSERT_ID(), %s, %s) """,
+        (inventory_id, cost, price))
 
 if __name__ == "__main__":
     import csv
