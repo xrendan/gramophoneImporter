@@ -43,7 +43,7 @@ def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
                     distributor_id,
                     entered_on, 
                     updated)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW()""",
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())""",
                     (title, medium_id, cd_number, upc, artist, composer, year, label_id, distributor_id))
     if not cursor.rowcount:
         print(f"failed insert on upc {upc}")
@@ -111,3 +111,6 @@ if __name__ == "__main__":
         if filename == "naxos.txt":
             for row in tsvin:
                 import_naxos(c, row)
+
+add_to_db(c, "TEST", 123456, 2, "123L", "BaCH", "PATH", 2017, 310151, 23, 12.99, 21.99)
+
