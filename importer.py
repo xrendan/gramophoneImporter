@@ -54,13 +54,13 @@ def update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
     cursor.execute("""UPDATE inventory SET
                 cd_title = %s,
                 medium_id = %s,
-                distributor_cd_number = %s
+                distributor_cd_number = %s,
                 artist = %s,
                 composer = %s,
                 catalogue_listing_year = %s,
                 label_id = %s,
-                distributor_id = %s
-                updated = NOW()
+                distributor_id = %s,
+                updated = NOW(),
                 WHERE upc = %s""", 
                 (title, medium_id, cd_number, artist, composer, year, label_id, distributor_id, upc))
     
@@ -112,5 +112,5 @@ if __name__ == "__main__":
             for row in tsvin:
                 import_naxos(c, row)
 
-add_to_db(c, "TEST", 123456, 2, "123L", "BaCH", "PATH", 2017, 310151, 23, 12.99, 21.99)
+update_db(c, "TEST", 123456, 2, "123L", "BACH", "PATH", 2017, 310151, 23, 13.99, 21.99)
 
