@@ -80,7 +80,6 @@ def import_naxos(cursor, row):
 
     if check_upc(cursor, upc):
         update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
-        cursor
     else:
         add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
 
