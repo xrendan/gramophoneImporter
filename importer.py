@@ -96,7 +96,7 @@ def update_pricing(cursor, cost, price):
 
 def add_pricing(cursor, cost, price):
     cursor.execute("""INSERT INTO inventory_pricing 
-        (inventory_id, unit_cost, unit_sell 
+        (inventory_id, unit_cost, unit_sell) 
         VALUES (LAST_INSERT_ID(), %s, %s) """,
         (cost, price))
 
@@ -111,6 +111,4 @@ if __name__ == "__main__":
         if filename == "naxos.txt":
             for row in tsvin:
                 import_naxos(c, row)
-
-add_to_db(c, "TEST", 123456, 2, "123L", "BaCH", "PATH", 2017, 310151, 23, 12.99, 21.99)
 
