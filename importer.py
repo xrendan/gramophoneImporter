@@ -94,7 +94,7 @@ def update_pricing(cursor, cost, price):
                 WHERE inventory_id = LAST_INSERT_ID(),""",
                 (cost, price))
 
-def add_pricing(cursor,):
+def add_pricing(cursor, cost, price):
     cursor.execute("""INSERT INTO inventory_pricing 
         (inventory_id, unit_cost, unit_sell 
         VALUES (LAST_INSERT_ID(), %s, %s) """,
