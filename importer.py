@@ -67,7 +67,7 @@ def update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
     if not cursor.rowcount:
         print(f"failed update on upc {upc}")
     else:
-        update_pricing(cursor, cost, price)
+        update_pricing(cursor, cost, price, upc)
 
 def import_naxos(cursor, row):
     title, upc, medium, cd_number, composer, artist, year, cost, label = row
@@ -95,7 +95,7 @@ def get_inventory_id(cursor, upc):
     else:
         return cursor.fetchone()[0]
 
-def update_pricing(cursor, cost, price):
+def update_pricing(cursor, cost, price, upc):
     inventory_id = get_inventory_id(cursor, upc)
     cursor.execute("""UPDATE inventory_pricing SET
                 unit_cost = %s,
