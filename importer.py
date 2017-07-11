@@ -30,7 +30,7 @@ def get_distributor_id(cursor, distributor):
     else:
         return cursor.fetchone()[0]
 
-def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price):
+def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price, blurb="NULL"):
     cursor.execute("""INSERT INTO inventory 
                    (cd_title,
                     medium_id,
@@ -42,9 +42,9 @@ def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
                     label_id,
                     distributor_id,
                     entered_on, 
-                    updated)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())""",
-                    (title, medium_id, cd_number, upc, artist, composer, year, label_id, distributor_id))
+                    updated, blurb)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW(), %s)""",
+                    (title, medium_id, cd_number, upc, artist, composer, year, label_id, distributor_id, blurb))
     if not cursor.rowcount:
         print(f"failed insert on upc {upc}")
     else:
@@ -110,7 +110,7 @@ def add_pricing(cursor, cost, price):
         (cost, price))
 
 def import_new_naxos(cursor, row):
-    _, label, cd_number, upc, artist, composer, title, medium, _, cost, _, year, _ = row
+    _, label, cd_number, upc, artist, composer, title, medium, _, cost, _, year, blurb = row
     
     distributor = "Naxos"
 
