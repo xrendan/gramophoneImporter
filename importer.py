@@ -86,7 +86,7 @@ def import_naxos(cursor, row):
         pass
 
 def get_sales_price(cost):
-    return int(int(cost) * 1.67 + 0.05) - 0.01
+    return int(float(cost) * 1.67 + 0.05) - 0.01
 
 def get_inventory_id(cursor, upc):
     cursor.execute("""SELECT inventory_id from inventory WHERE upc = %s""", (upc,))
