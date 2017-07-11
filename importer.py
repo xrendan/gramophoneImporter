@@ -79,7 +79,7 @@ def import_naxos(cursor, row):
     price = get_sales_price(cost)
 
     if check_upc(cursor, upc):
-        # update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
     else:
         add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
 
@@ -110,6 +110,18 @@ def add_pricing(cursor, cost, price):
 
 def import_new_naxos(cursor, row):
     _, label, cd_number, upc, artist, composer, title, medium, _, cost, _, year, _ = row
+    
+    distributor = "Naxos"
+
+    distributor_id = get_distributor_id(cursor, distributor)
+    label_id = get_label_id(cursor, label, distributor_id)
+    medium_id = get_medium_id(cursor, medium)
+    price = get_sales_price(cost)
+
+    if check_upc(cursor, upc):
+        update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+    else:
+        add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
 
 def import_general(cursor, row):
     pass
@@ -131,8 +143,7 @@ if __name__ == "__main__":
         with open(argv[1], 'r', encoding='latin_1') as csvfile:
             csvin = csv.reader(csvfile)
             for row in csvin:
-                # import_new_naxos(c, row)
-                print(row)
+                import_new_naxos(c, row)
     else:
         for row in tsvin:
             import_general(c, row)
