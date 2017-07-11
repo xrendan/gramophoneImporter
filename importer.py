@@ -96,11 +96,12 @@ def get_inventory_id(cursor, upc):
         return cursor.fetchone()[0]
 
 def update_pricing(cursor, cost, price):
+    inventory_id = get_inventory_id(cursor, upc)
     cursor.execute("""UPDATE inventory_pricing SET
                 unit_cost = %s,
                 unit_sell = %s
-                WHERE inventory_id = LAST_INSERT_ID(),""",
-                (cost, price))
+                WHERE inventory_id = %s,""",
+                (cost, price, inventory_id))
 
 def add_pricing(cursor, cost, price):
     cursor.execute("""INSERT INTO inventory_pricing 
@@ -120,9 +121,10 @@ def import_new_naxos(cursor, row):
 
     if check_upc(cursor, upc):
         update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        print("update")
     else:
         add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
-
+        print("add")
 def import_general(cursor, row):
     pass
 
@@ -136,8 +138,9 @@ if __name__ == "__main__":
     if filename == "naxos.txt":
             with open(argv[1], 'r', encoding='latin_1') as tsvfile:
                 tsvin = csv.reader(tsvfile, delimiter='\t')
-                for row in tsvin:
+                for idx, row in enumerate(tsvin):
                     import_naxos(c, row)
+                    print(idx, end=" ")
         
     elif filename == "new_naxos.csv":
         with open(argv[1], 'r', encoding='latin_1') as csvfile:
