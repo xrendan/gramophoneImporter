@@ -142,6 +142,7 @@ if __name__ == "__main__":
             for idx, row in enumerate(tsvin):
                 print(idx, "\n")
                 import_naxos(c, row)
+            db.commit()
                     
         
     elif filename == "new_naxos.csv":
