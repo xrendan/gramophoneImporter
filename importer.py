@@ -135,12 +135,13 @@ if __name__ == "__main__":
     filename = argv[1]
     
 
-    if filename == "naxos.txt":
-            with open(argv[1], 'r', encoding='latin_1') as tsvfile:
-                tsvin = csv.reader(tsvfile, delimiter='\t')
-                for idx, row in enumerate(tsvin):
-                    print(idx, "\n")
-                    import_naxos(c, row)
+    # if filename == "naxos.txt":
+    if 1:
+        with open(argv[1], 'r', encoding='latin_1') as tsvfile:
+            tsvin = csv.reader(tsvfile, delimiter='\t')
+            for idx, row in enumerate(tsvin):
+                print(idx, "\n")
+                import_naxos(c, row)
                     
         
     elif filename == "new_naxos.csv":
