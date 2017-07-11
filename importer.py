@@ -79,14 +79,21 @@ def import_naxos(cursor, row):
     price = get_sales_price(cost)
 
     if check_upc(cursor, upc):
-        update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        # update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
     else:
-        # add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+
         pass
 
 def get_sales_price(cost):
     return int(cost * 1.67 + 0.05) - 0.01
 
+def get_inventory_id(cursor, upc):
+    cursor.execute("""SELECT inventory_id from inventory WHERE upc = %s""", (upc,))
+    if not cursor.rowcount:
+        raise ValueError(f"Could not find item with upc: {upc} in database")
+    else:
+        return cursor.fetchone()[0]
 
 def update_pricing(cursor, cost, price):
     cursor.execute("""UPDATE inventory_pricing SET
@@ -101,15 +108,30 @@ def add_pricing(cursor, cost, price):
         VALUES (LAST_INSERT_ID(), %s, %s, 1) """,
         (cost, price))
 
+def import_new_naxos(cursor, row):
+    _, label, cd_number, upc, artist, composer, title, medium, _, cost, _, year, _ = row
+def import_general(cursor, row):
+    pass
+
 if __name__ == "__main__":
     import csv
     from sys import argv
 
     filename = argv[1]
-    with open(argv[1], 'r', encoding='latin_1') as tsvfile:
-        tsvin = csv.reader(tsvfile, delimiter='\t')
+    
 
-        if filename == "naxos.txt":
-            for row in tsvin:
-                import_naxos(c, row)
+    if filename == "naxos.txt":
+            with open(argv[1], 'r', encoding='latin_1') as tsvfile:
+                tsvin = csv.reader(tsvfile, delimiter='\t')
+                for row in tsvin:
+                    import_naxos(c, row)
+        
+    elif filename = "new_naxos.csv":
+        with open(argv[1], 'r', encoding='latin_1') as csvfile:
+            csvin = csv.reader(csvfile)
+            for row in csvin:
+                import_new_naxos(c, row)
+    else:
+        for row in tsvin:
+            import_general(c, row)
 
