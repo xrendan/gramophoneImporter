@@ -98,7 +98,7 @@ def get_inventory_id(cursor, upc):
 def update_pricing(cursor, cost, price, upc):
     inventory_id = get_inventory_id(cursor, upc)
     cursor.execute(f"""UPDATE inventory_pricing SET
-                unit_cost = {cost}},
+                unit_cost = {cost},
                 unit_sell = {price},
                 WHERE inventory_id = %s,""",
                 (inventory_id,))
