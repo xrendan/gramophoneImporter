@@ -149,6 +149,7 @@ if __name__ == "__main__":
             csvin = csv.reader(csvfile)
             for row in csvin:
                 import_new_naxos(c, row)
+            db.commit()
     else:
         for row in tsvin:
             import_general(c, row)
