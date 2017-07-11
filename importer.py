@@ -101,7 +101,7 @@ def update_pricing(cursor, cost, price, upc):
                 unit_cost = %s,
                 unit_sell = %s
                 WHERE inventory_id = %s""",
-                (cost, priceinventory_id))
+                (cost, price, inventory_id))
 
 def add_pricing(cursor, cost, price):
     cursor.execute("""INSERT INTO inventory_pricing 
