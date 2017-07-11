@@ -97,11 +97,11 @@ def get_inventory_id(cursor, upc):
 
 def update_pricing(cursor, cost, price, upc):
     inventory_id = get_inventory_id(cursor, upc)
-    cursor.execute("""UPDATE inventory_pricing SET
-                unit_cost = %s,
-                unit_sell = %s
+    cursor.execute(f"""UPDATE inventory_pricing SET
+                unit_cost = {cost}},
+                unit_sell = {price},
                 WHERE inventory_id = %s,""",
-                (cost, price, inventory_id))
+                (inventory_id,))
 
 def add_pricing(cursor, cost, price):
     cursor.execute("""INSERT INTO inventory_pricing 
