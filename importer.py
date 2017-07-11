@@ -42,7 +42,7 @@ def add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, 
                     label_id,
                     distributor_id,
                     entered_on, 
-                    updated, blurb)
+                    updated, distributor_sales_blurb)
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW(), %s)""",
                     (title, medium_id, cd_number, upc, artist, composer, year, label_id, distributor_id, blurb))
     if not cursor.rowcount:
