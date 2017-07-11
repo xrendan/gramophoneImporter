@@ -100,7 +100,7 @@ def update_pricing(cursor, cost, price, upc):
     cursor.execute(f"""UPDATE inventory_pricing SET
                 unit_cost = {cost},
                 unit_sell = {price},
-                WHERE inventory_id = %s,""",
+                WHERE inventory_id = %s""",
                 (inventory_id,))
 
 def add_pricing(cursor, cost, price):
