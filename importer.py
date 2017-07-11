@@ -80,10 +80,10 @@ def import_naxos(cursor, row):
 
     if check_upc(cursor, upc):
         update_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+        print("update")
     else:
         add_to_db(cursor, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
-
-        pass
+        print("add")
 
 def get_sales_price(cost):
     return int(float(cost) * 1.67 + 0.05) - 0.01
