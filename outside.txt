@@ -9462,7 +9462,6 @@ DAPT1027	"BUDOS BAND, THE"	The Proposition / Ghost Walk	Redeye / Daptone Records
 DAPT1047	3 TITANS	College b/w The Life Of A Scholar	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1046	"BANKS, DARRELL"	Don't Know What To Do/My Love Is Reserved	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1030	BINKY GRIPTITE	World Of Love / Stone Soul Christmas	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
-									
 DAPT1042	BINKY GRIPTITE & THE MELLOMATI	"One Time, You're Mine / You're Gonna Cry"	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1043	BINKY GRIPTITE & THE MELLOMATI	The Stroll / The Stroll Pt. 2	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1058	"BRADLEY, CHARLES"	Every Day Is Christmas (When I m Lovin' You) b/w Mary's Baby	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
@@ -9473,7 +9472,6 @@ DAPT1008	"COMPANY, THE"	La Culebra / Part 2	Redeye / Daptone Records	 Funk		N/A	
 DAPT1039	EDDIE & ERNIE	Bullets Don't Have Eyes / In These Very Moments	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT10392	EDDIE & ERNIE	Bullets Don't Have Eyes / You Make My Life A Sunny Day	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1002	"FIELDS, LEE & THE DAP-KINGS"	Give Me A Chance / Part 2	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
-									
 DAPT1010	"FIELDS, LEE AND SUGARMAN & CO."	Shot Down / Honey Wagon	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1001	"JONES, SHARON & THE DAP-KINGS"	Got A Thing On My Mind / Instrumental	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
 DAPT1016	"JONES, SHARON & THE DAP-KINGS"	Genuine / Part 2	Redeye / Daptone Records	 Funk		N/A	"7"""	6.47	2011
@@ -9758,8 +9756,6 @@ DBL0012	"PHILLIPS, BRITA"	Luck Or Magic	Redeye / Double Feature	"Rock-Pop  cross
 34457-5150-2	MY ROBOT FRIEND	Soft-Core	Redeye / Double Feature Records	Rock-Pop		634457515024	CD	12.96	
 34457-5048-2	"SAND PEBBLES, THE"	A Thousand Wild Flowers	Redeye / Double Feature Records	Rock-Pop		634457504820	CD	12.96	
 34457-6169-2	"WAREHAM, DEAN"	Emancipated Hearts	Redeye / Double Feature Records	Rock-Pop		634457616929	CD	10.99	
-									
-									
 DOVE0062	TRASH TALK	"Coastline - 7"""	Redeye / Dovecote Records	Rock-Pop		634457646872	"7"""	6.97	2014
 DOVE0062	WUNDER WUNDER	"Coastline - 7"""	Redeye / Dovecote Records	Rock-Pop		634457646872	"7"""	6.97	2014
 DOVE0063	HOORAY FOR EARTH	"Keys - 7"""	Redeye / Dovecote Records	Rock-Pop		634457653276	"7"""	7.60	2014
@@ -10171,9 +10167,6 @@ FD044	SAT. NITE DUETS	Air Guitar	Daughter Records	Rock-Pop		634457731318	LP	15.2
 FD049	HICCUP	Imaginary Enemies  (YELLOW LP)	Daughter Records	Rock-Pop		634457754119	LP	17.97	2017
 FD050	LOOSE TOOTH	Big Day (aqua blue vinyl)	Daughter Records	Rock-Pop		634457754218	LP	17.97	2017
 34457-5618-2	"CLEARY, JON"	Occapella!	Redeye / FHQ Records	Soul/R&B		634457561823	CD	12.96	2012
-									
-									
-									
 70213-2542-2	LACKTHEREOF	Christian the Christian	Redeye / Film Guerrero	Rock-Pop		670213254226	CD	13.94	2008
 51937-2937-2	MENOMENA	Wet and Rusting	Redeye / Film Guerrero	Rock-Pop		751937293729	CD	8.94	2008
 23724-3701-2	NORFOLK & WESTERN	Winter Farewell	Redeye / Film Guerrero	Rock-Pop		723724370128	CD	13.94	2008
@@ -10373,7 +10366,6 @@ GSL110	YEAR FUTURE	First World Fever	Redeye / Gold Standard Labs	Rock-Pop		61350
 53760-0185-0	AFRICAINE 808	Basar	Redeye / Golf Channel Recordings	Electronic		5053760018506	CD	19.93	2016
 CHANNEL52	GALA DROP	II	Redeye / Golf Channel Recordings	Rock-Pop		5053760011781	LP	26.91	2015
 CHANNEL29	MIND FAIR	Mind Fair	Redeye / Golf Channel Recordings	Rock-Pop		616822016411	LP	26.91	2015
-									
 CHANNEL35	"CENTRAL EXECUTIVES, THE"	A Walk in the Dark	Redeye / Golf Channel Recordings	Rock-Pop		5053760015703	LPx2	26.91	2015
 CHANNEL48	VARIOUS ARTISTS	Mangiami - La Compilation	Redeye / Golf Channel Recordings	Electronic		5053760018544	LPx2	26.91	2015
 CHANNEL55	AFRICAINE 808	Basar	Redeye / Golf Channel Recordings	Electronic		5053760018513	LPx2	36.92	2016
@@ -11366,7 +11358,6 @@ MARDEV002	NADA SURF	The Proximity Effect LP	Redeye / Mardev Records	Rock-Pop		65
 34457-6446-2	MARGOT & THE NUCLEAR SO & SO'S	Sling Shot To Heaven	Redeye / Mariel Recording Co	Rock-Pop		634457644625	CD	12.96	2014
 LPMRC002	MARGOT & THE NUCLEAR SO+SO'S	Buzzard	Redeye / Mariel Recording Co	Rock-Pop		634457533516	LP	19.93	2010
 34457-5574-2	MARGOT AND THE NUCLEAR SO & SO'S	"Rot Gut, Domestic"	Redeye / Mariel Recording Co.	Rock-Pop		634457557413	CD	12.96	2012
-									
 01017-9986-1	"STONE, ROB"	Gotta Keep Rollin'	 VizzTone	Blues		701017998617	CD	12.96	2014
 88295-0423-3	"APOLLO, JAMES"	Angelorum	Redeye / Marterry	Rock-Pop		888295042338	CD	10.01	2014
 16892-2862-4	CHRISTOPHER THE CONQUERED	I'm Giving Up On Rock & Roll	Redeye / Maximum Ames Records	Rock-Pop		616892286240	CD	11.98	2016
