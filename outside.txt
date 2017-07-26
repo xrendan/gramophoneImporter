@@ -15429,7 +15429,6 @@ CT039	WET DOG	Lower Leg	SD / Captured Tracks	Rock-Pop		817949010393	"7"""	4.55
 17949-0145-4	"CLEANERS FROM VENUS, THE"	Vol.1	SD / Captured Tracks	Rock-Pop		817949014544	CDx3	19.00	
 17949-0182-2	CLEANERS FROM VENUS	V2/Cleaners From Venus	SD / Captured Tracks	Rock-Pop		817949018221	CDx4	21.88	2013
 CT158	DIIV	Oshin	SD / Captured Tracks	Rock-Pop		817949015817	LP	14.38	2012
-									
 CT160	HEAVENLY BEAT	Talent	SD / Captured Tracks	Rock-Pop		817949016029	LP	11.88	2012
 CT161	DIGNAN PORCH	Nothing Bad Will Ever Happen	SD / Captured Tracks	Rock-Pop		817949016111	LP	12.00	2012
 CT162	WILD NOTHING	Nocturne	SD / Captured Tracks	Rock-Pop		817949016227	LP	16.88	2012

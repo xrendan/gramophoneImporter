@@ -180,7 +180,7 @@ if __name__ == "__main__":
         with open(argv[1], 'r', encoding='latin_1') as tsvfile:
             tsvin = csv.reader(tsvfile, delimiter='\t')
             for idx, row in enumerate(tsvin):
-                print(idx, "\n")
+                print(idx, "\n", row)
                 import_outside(c, row)
     else:
         pass
