@@ -5371,7 +5371,7 @@ MET925	KMFDM	"Light [LTD ED 12"" single]"	Metropolis	Industrial / Rock-Pop		7823
 82388-1000-2	DELERIUM	Mythologie	Metropolis	Electronic		782388100021	CD	11.00	2016
 82388-1042-2	PANIC LIFT	Skeleton Key	Metropolis	Electronic		782388104227	CD	11.00	2016
 82388-1044-2	ARMY OF THE UNIVERSE	1999 & The Aftershow	Metropolis	Electronic		782388104425	CD	11.00	2016
-82388-1054-2	MESH	Looking Skyward	Metropolis	Synthpop		782388105422	CD	11..00	2016
+82388-1054-2	MESH	Looking Skyward	Metropolis	Synthpop		782388105422	CD	11.00	2016
 82388-1048-2	ELECTRIC SIX	Fresh Blood For Tired Vampyres	Metropolis	World		782388104821	CD	11.00	2016
 82388-1049-2	PENETRATION	Resolution	Metropolis	Punk		782388104920	CD	11.00	2016
 82388-1041-2	EGO LIKENESS	The Compass EP's	Metropolis	Rock-Pop / Darkwave		782388104128	CD	11.00	2016
