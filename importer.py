@@ -132,7 +132,7 @@ def import_outside(cursor, row):
     distributor = "Outside Distribution"
     distributor_id = get_distributor_id(cursor, distributor)
 
-    cd_number, artist, title, label, _, _, upc, medium, cost, year, blurb = row
+    cd_number, artist, title, label, _, _, upc, medium, cost, year = row
 
     label_id = get_label_id(cursor, label, distributor_id)
     medium_id = get_medium_id(cursor, medium)
@@ -179,7 +179,7 @@ if __name__ == "__main__":
         with open(argv[1], 'r', encoding='latin_1') as tsvfile:
             tsvin = csv.reader(tsvfile, delimiter='\t')
             for idx, row in enumerate(tsvin):
-                print(idx, "\n")
+                print(idx, "\n", row)
                 import_naxos(c, row)
     else:
         pass
