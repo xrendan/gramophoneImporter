@@ -133,6 +133,7 @@ def import_outside(cursor, row):
     distributor_id = get_distributor_id(cursor, distributor)
 
     cd_number, artist, title, label, _, _, upc, medium, cost, year = row
+    composer = ''
 
     label_id = get_label_id(cursor, label, distributor_id)
     medium_id = get_medium_id(cursor, medium)
