@@ -9164,20 +9164,14 @@ BRGR434LP	DEAD GHOSTS	Can't Get No	Redeye / Burger Records	Rock-Pop		63445759671
 BRGR483LP	"SUFIS, THE"	Inventions	Redeye / Burger Records	Rock-Pop		634457614819	LP	15.20	2013
 BRGR497	COSMONAUTS	Persona Non Grata	Redeye / Burger Records	Rock-Pop		634457615816	LP	17.97	2013
 BRGR555	GAP DREAM	Shine Your Light	Redeye / Burger Records	Rock-Pop		634457616615	LP	17.97	2014
-									
 BRGR575	DENNEY AND THE JETS	Mexican Coke	Redeye / Burger Records	Rock-Pop		634457642010	LP	17.97	2014
-									
-									
 BRGR290	RESONARS	Crummy Desert Sound	Redeye / Burger Records	Rock-Pop		634457606210	LP	17.97	2014
 BRGR498	"ABIGAILS, THE"	Tundra	Redeye / Burger Records	Rock-Pop		634457615915	LP	18.95	2014
-									
 BRGR566	"COLEMAN, JOHN WESLEY"	The Love That You Own	Redeye / Burger Records	Rock-Pop		634457635319	LP	19.93	2014
 BRGR662	"MEMORIES, THE"	Hot Afternoon	Redeye / Burger Records	Rock-Pop		634457663411	LP	19.93	2014
 BRGR619	WAX WITCHES	Center Of Your Universe	Redeye / Burger Records	Rock-Pop		634457661318	LP	19.93	2014
-									
 BRGR200	DAVILA 666	"Pocos Anos, Muchos Danos"	Redeye / Burger Records	Rock-Pop		634457636316	LP	21.90	2014
 BRGR599	"DAVILA, AJ Y TERROR AMOR"	Beibi	Redeye / Burger Records	Rock-Pop		634457636415	LP	19.93	2014
-									
 BRGR030	"JAMES, DANNY"	Pear	Redeye / Burger Records	Rock-Pop		634457660618	LP	19.93	2015
 BRGR800	"NELSON, SARAH BETHE"	Fast Moving Clouds	Redeye / Burger Records	Rock-Pop		634457673519	LP	20.92	2015
 BRGR925	PEACH KELLI POP	Peach Kelli Pop III	Redeye / Burger Records	Rock-Pop	Canadian	634457681613	LP	20.92	2015
