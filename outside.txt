@@ -8845,7 +8845,6 @@ BARK060	MENOMENA	Friend And Foe	Redeye / Barsuk	Rock-Pop		751937310617	LP	23.03	
 BARK164	"STAPLES, CHRIS"	Golden Age	Redeye / Barsuk	Rock-Pop		655173116418	LP	19.74	2016
 BARK103	DISMEMBERMENT PLAN	Emergency & I	Redeye / Barsuk	Rock-Pop		655173110317	LP	27.38	
 BARK095	PEARLY GATE MUSIC	Pearly Gate Music	Redeye / Barsuk	Rock-Pop		655173109519	LP	14.22	
-									
 BARK149	CYMBALS EAT GUITARS	Why There Are Mountains	Redeye / Barsuk	Rock-Pop		655173114919	LP	18.59	
 BARK005	DEATH CAB FOR CUTIE	Something About Airplanes	Redeye / Barsuk	Rock-Pop		655173100516	LP	21.88	
 BARK011	DEATH CAB FOR CUTIE	We Have The Facts And We're Voting Yes	Redeye / Barsuk	Rock-Pop		655173101117	LP	21.88	
