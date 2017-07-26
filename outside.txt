@@ -12926,7 +12926,6 @@ BAY001	WHEAT	Medeiros	Redeye / Shorebird	Rock-Pop		634457659315	LPx2	15.20	2014
 01237-2033-2	REDBIRD	Live	Redeye / Signature Sounds	Folk		701237203324	CD	12.96	
 01237-2015-2	"SACRED SHAKERS, THE"	The Sacred Shakers	Redeye / Signature Sounds	Folk		701237201528	CD	12.96	
 01237-2060-2	"SACRED SHAKERS, THE"	Live	Redeye / Signature Sounds	Folk		701237206028	CD	12.96	
-									
 01237-2001-2	"SMITHER, CHRIS"	Leave The Light On	Redeye / Signature Sounds	Folk		701237200125	CD	12.96	
 01237-2024-2	"SMITHER, CHRIS"	Time Stands Still	Redeye / Signature Sounds	Folk		701237202426	CD	12.96	
 01237-2047-2	"SMITHER, CHRIS"	Hundred Dollar Valentine	Redeye / Signature Sounds	Folk		701237204727	CD	12.96	
