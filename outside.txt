@@ -17874,7 +17874,7 @@ TRR182	"BOOKS, THE"	Lost And Safe (reissue)	SD / Temporary Residence Ltd.	Rock-P
 TRR284	GRAILS	"Black Tar Prophecies Vol's 1, 2, & 3 (Reissue)"	SD / Temporary Residence Ltd.	Rock-Pop		656605328416 	LP	13.50	2017
 TRR285	GRAILS	Take Refuge In Clean Living (Reissue)	SD / Temporary Residence Ltd.	Rock-Pop		 656605328515 	LP	13.50	2017
 TRR286	PINBACK	 Some Offcell Voices 	SD / Temporary Residence Ltd.	Rock-Pop		656605328614	LP	13.50	2017
-TRR023	TARANTEL	From Bone To Satellite	SD / Temporary Residence Ltd.	Rock-Pop		656605302317	LPx2	19..00	2016
+TRR023	TARANTEL	From Bone To Satellite	SD / Temporary Residence Ltd.	Rock-Pop		656605302317	LPx2	19.00	2016
 TRR265	ELUVIUM	False Readings	SD / Temporary Residence Ltd.	Rock-Pop		656605326511	LPx2	17.00	2016
 TRR273	MONO	Requiem For Hell 	SD / Temporary Residence Ltd.	Rock-Pop		656605327310	LPx2	15.00	2016
 TEXT018	FOUR TET	Pink	SD / Text	Electronic		656605391816	LPx2	15.63	2015
