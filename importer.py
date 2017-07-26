@@ -180,7 +180,7 @@ if __name__ == "__main__":
             tsvin = csv.reader(tsvfile, delimiter='\t')
             for idx, row in enumerate(tsvin):
                 print(idx, "\n", row)
-                import_naxos(c, row)
+                import_outside(c, row)
     else:
         pass
         # for row in tsvin:
