@@ -12734,7 +12734,6 @@ SH078	FANG ISLAND	Major	Redeye / Sargent House	Rock-Pop		634457562714	LP	18.75	2
 SH082	THIS TOWN NEEDS GUNS	Animals	Redeye / Sargent House	Rock-Pop		634457570214	LP	16.80	2012
 SH085	CRYPTS	Crypts	Redeye / Sargent House	Rock-Pop		634457570818	LP	15.03	2012
 SH091	"WOLFE, CHELSEA"	Unknown Rooms: A Collection Of Acoustic Songs	Redeye / Sargent House	Rock-Pop		634457572317	LP	16.80	2012
-									
 SH081	"VSS, THE"	Nervous Circuits + 25:34 (re-issue)	Redeye / Sargent House	Rock-Pop		634457570115	LP	26.62	2012
 SH080	THIS TOWN NEEDS GUNS	13.0.0.0.0	Redeye / Sargent House	Rock-Pop		634457564312	LP	18.75	2013
 SH095	AND SO I WATCH YOU FROM AFAR	All Hail Bright Futures	Redeye / Sargent House	Rock-Pop		634457575813	LP	18.75	2013
