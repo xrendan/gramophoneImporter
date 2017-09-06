@@ -176,7 +176,7 @@ if __name__ == "__main__":
             for row in csvin:
                 import_new_naxos(c, row)
 
-    elif filename == "outside.txt":
+    elif filename[:7] == "outside":
         with open(argv[1], 'r', encoding='latin_1') as tsvfile:
             tsvin = csv.reader(tsvfile, delimiter='\t')
             for idx, row in enumerate(tsvin):
