@@ -94,7 +94,7 @@ class GenericImporter():
 
         if not self.c.rowcount:
             print(f"failed update on upc {upc}")
-        else:
+        elif cost != 0:
             self.update_pricing(cost, price, upc)
 
     def delete_row(self):
