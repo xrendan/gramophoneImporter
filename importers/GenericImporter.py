@@ -65,8 +65,12 @@ class GenericImporter():
                         label_id,
                         distributor_id,
                         entered_on, 
-                        updated, distributor_sales_blurb)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW(), %s)""",
+                        updated, 
+                        distributor_sales_blurb,
+                        distributor_stocklevel,
+                        distributor_last_updated,
+                        category_id)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW(), %s, 0, NOW(), 133)""",
                        (title, medium_id, cd_number, upc, artist, composer, year, label_id, distributor_id, blurb))
         if not self.c.rowcount:
             print(f"failed insert on upc {upc}")
