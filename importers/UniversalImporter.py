@@ -7,7 +7,7 @@ class UniversalFullImporter(GenericImporter):
 
     def execute_row(self, row):
         super().execute_row(row)
-        label, _, year, artist, title, cd_number, upc, _, _, _, cost, medium = row
+        label, _, year, artist, title, cd_number, upc, _, _, _, cost, medium, _ = row
         composer = ""
         distributor = "Universal"
 
