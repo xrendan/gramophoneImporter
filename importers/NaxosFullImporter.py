@@ -6,7 +6,7 @@ class NaxosFullImporter(GenericImporter):
         super().__init__(db)
 
     def execute_row(self, row):
-        super().execute_row()
+        super().execute_row(row)
         _, label, _, cd_number, title, upc, _, _, year, artist, composer, medium, _ = row
         cost = 0
         distributor = "Naxos"
