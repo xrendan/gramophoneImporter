@@ -9,7 +9,7 @@ class NaxosFullUpcAdder(GenericImporter):
         self.c.execute("""INSERT INTO upc 
                        (upc)
                         VALUES (%s)""",
-                       (upc))
+                       (upc,))
         if not self.c.rowcount:
             print(f"failed insert on upc {upc}")
 
@@ -18,4 +18,3 @@ class NaxosFullUpcAdder(GenericImporter):
         _, label, _, cd_number, title, upc, _, _, year, artist, composer, medium, _ = row
 
         self.add_upc(upc)
-

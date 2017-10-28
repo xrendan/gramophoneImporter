@@ -9,7 +9,7 @@ class NaxosMonthlyUpcAdder(GenericImporter):
         self.c.execute("""INSERT INTO upc 
                        (upc)
                         VALUES (%s)""",
-                       (upc))
+                       (upc,))
         if not self.c.rowcount:
             print(f"failed insert on upc {upc}")
 
