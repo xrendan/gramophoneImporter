@@ -7,7 +7,6 @@ class NaxosFullImporter(GenericImporter):
 
     def execute_row(self, row):
         super().execute_row(row)
-        _, label, _, cd_number, title, upc, _, _, year, artist, composer, medium, _ = row
         cd_number, upc, composer, title, artist, _, cost, _, label, year, medium, _ = row
 
         distributor = "Naxos"
