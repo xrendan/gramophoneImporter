@@ -7,8 +7,7 @@ from importers.NaxosDeleter import NaxosDeleter
 from importers.SonyPriceChanger import SonyPriceChanger
 from importers.WarnerDistributorChanger import WarnerDistributorChanger
 from importers.NaxosGuildImporter import NaxosGuildImporter
-from importers.UniversalImporter import UniversalFullImporter
-
+from importers.UniversalImporter import UniversalFullImporter, UniversalDiscontinuer
 
 
 def factory(import_type, db):
@@ -22,6 +21,9 @@ def factory(import_type, db):
     if import_type == "Warner_Distributor_Changer": return WarnerDistributorChanger(db)
     if import_type == "Naxos_Guild_Importer": return NaxosGuildImporter(db)
     if import_type == "Universal_Full": return UniversalFullImporter(db)
+    if import_type == "Universal_Discontinue":
+        return UniversalDiscontinuer(db)
+
 
     else:
         raise SyntaxError

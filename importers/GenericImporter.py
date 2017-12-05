@@ -38,6 +38,13 @@ class GenericImporter():
         else:
             return self.c.fetchone()[0]
 
+    def get_title(self, upc):
+        self.c.execute("""SELECT cd_title from inventory WHERE upc = %s""", (upc,))
+        if not self.c.rowcount:
+            raise ValueError(f"Could not find item with upc: {upc} in database")
+        else:
+            return self.c.fetchone()[0]
+
     def add_pricing(self, cost, price):
         self.c.execute("""INSERT INTO inventory_pricing 
             (inventory_id, unit_cost, unit_sell, store_id) 
@@ -77,6 +84,18 @@ class GenericImporter():
         else:
             self.add_pricing(cost, price)
 
+    def discontinue(self, upc):
+        try:
+            old_title = self.get_title(upc)
+            new_title = "DISC" + old_title
+            self.c.execute("""UPDATE inventory SET
+                                cd_title = %s,
+                                updated = NOW()
+                                WHERE upc = %s """,
+                           (new_title, upc))
+        except ValueError:
+            pass
+
     def update_row(self, title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost,
                    price):
         self.c.execute("""UPDATE inventory SET
@@ -99,6 +118,7 @@ class GenericImporter():
 
     def delete_row(self):
         pass
+
     def get_sales_price(self, cost):
         return int(float(cost) * 1.67 + 0.05) - 0.01
 

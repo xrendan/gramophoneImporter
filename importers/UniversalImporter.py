@@ -23,3 +23,14 @@ class UniversalFullImporter(GenericImporter):
             self.add_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost,
                       price)
             print("add")
+
+
+class UniversalDiscontinuer(GenericImporter):
+    def __init__(self, db):
+        super().__init__(db)
+
+    def execute_row(self, row):
+        super().execute_row(row)
+        upc = row[0]
+
+        self.discontinue(upc)
