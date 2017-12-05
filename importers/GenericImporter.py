@@ -87,7 +87,7 @@ class GenericImporter():
     def discontinue(self, upc):
         try:
             old_title = self.get_title(upc)
-            new_title = "DISC" + old_title
+            new_title = "DISC " + old_title
             self.c.execute("""UPDATE inventory SET
                                 cd_title = %s,
                                 updated = NOW()

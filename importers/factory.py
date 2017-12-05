@@ -21,9 +21,7 @@ def factory(import_type, db):
     if import_type == "Warner_Distributor_Changer": return WarnerDistributorChanger(db)
     if import_type == "Naxos_Guild_Importer": return NaxosGuildImporter(db)
     if import_type == "Universal_Full": return UniversalFullImporter(db)
-    if import_type == "Universal_Discontinue":
-        return UniversalDiscontinuer(db)
-
+    if import_type == "Universal_Discontinue": return UniversalDiscontinuer(db)
 
     else:
         raise SyntaxError
