@@ -1,5 +1,5 @@
 from importers.NaxosMonthlyImporter import NaxosMonthlyImporter
-from importers.NaxosFullImporter import NaxosFullImporter
+from importers.NaxosFullImporter import *
 from importers.NaxosMonthlyUpcAdder import NaxosMonthlyUpcAdder
 from importers.NaxosFullUpcAdder import NaxosFullUpcAdder
 from importers.OutsideImporter import OutsideImporter
@@ -13,6 +13,7 @@ from importers.UniversalImporter import UniversalFullImporter, UniversalDisconti
 def factory(import_type, db):
     if import_type == "Naxos_Monthly": return NaxosMonthlyImporter(db)
     if import_type == "Naxos_Full": return NaxosFullImporter(db)
+    if import_type == "Naxos_Vendor": return NaxosVendorCodingImporter(db)
     if import_type == "Naxos_Monthly_UPC": return NaxosMonthlyUpcAdder(db)
     if import_type == "Naxos_Full_UPC": return NaxosFullUpcAdder(db)
     if import_type == "Naxos_Deleter": return NaxosDeleter(db)
