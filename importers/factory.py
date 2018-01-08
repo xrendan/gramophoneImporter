@@ -23,6 +23,8 @@ def factory(import_type, db):
     if import_type == "Naxos_Guild_Importer": return NaxosGuildImporter(db)
     if import_type == "Universal_Full": return UniversalFullImporter(db)
     if import_type == "Universal_Discontinue": return UniversalDiscontinuer(db)
+    if import_type == "Universal_Price_Code": return UniversalPriceCodeUpdater(db)
+
 
     else:
         raise SyntaxError
