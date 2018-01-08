@@ -34,3 +34,13 @@ class UniversalDiscontinuer(GenericImporter):
         upc = row[0]
 
         self.discontinue(upc)
+
+class UniversalPriceCodeUpdater(GenericImporter):
+    def __init__(self, db):
+        super().__init__(db)
+
+    def execute_row(self, row):
+        super().execute_row(row)
+        upc, price_code = row
+        if self.check_upc(upc):
+            self.update_price_code(upc, price_code)

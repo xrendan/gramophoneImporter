@@ -127,3 +127,15 @@ class GenericImporter():
 
     def commit(self):
         self.db.commit()
+
+    def check_pricing(self, inventory_id):
+        self.c.execute("""SELECT inventory_id from inventory_pricing WHERE inventory_id = %s""", (inventory_id,))
+        return self.c.rowcount
+
+    def update_price_code(self, upc, price_code):
+        inventory_id = self.get_inventory_id(upc)
+        if self.check_pricing(inventory_id):
+            self.c.execute("""UPDATE inventory_pricing SET
+                                price_code = %s
+                                WHERE inventory_id = %s """,
+                           (price_code, inventory_id))

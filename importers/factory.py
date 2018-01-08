@@ -7,7 +7,7 @@ from importers.NaxosDeleter import NaxosDeleter
 from importers.SonyPriceChanger import SonyPriceChanger
 from importers.WarnerDistributorChanger import WarnerDistributorChanger
 from importers.NaxosGuildImporter import NaxosGuildImporter
-from importers.UniversalImporter import UniversalFullImporter, UniversalDiscontinuer
+from importers.UniversalImporter import *
 
 
 def factory(import_type, db):
