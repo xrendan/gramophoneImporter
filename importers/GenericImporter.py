@@ -135,6 +135,7 @@ class GenericImporter():
     def update_price_code(self, upc, price_code):
         inventory_id = self.get_inventory_id(upc)
         if self.check_pricing(inventory_id):
+            print(upc)
             self.c.execute("""UPDATE inventory_pricing SET
                                 price_code = %s
                                 WHERE inventory_id = %s """,
