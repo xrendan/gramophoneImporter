@@ -24,7 +24,7 @@ def factory(import_type, db):
     if import_type == "Universal_Full": return UniversalFullImporter(db)
     if import_type == "Universal_Discontinue": return UniversalDiscontinuer(db)
     if import_type == "Universal_Price_Code": return UniversalPriceCodeUpdater(db)
-
+    if import_type == "Naxos_Monthly_Catalogue": return NaxosMonthlyCatalogueUpdater(db)
 
     else:
         raise SyntaxError
