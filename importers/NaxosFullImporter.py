@@ -86,7 +86,7 @@ class NaxosVendorNewCodingImporter(GenericImporter):
 
     def execute_row(self, row):
         super().execute_row(row)
-        year, upc, cd_number, composer, title, artist, _, medium, _, label, cost, _, price_code, blurb, *_ = row
+        year, _, _, label, cd_number, upc, composer, title, artist, _, medium, cost, blurb, *_ = row
 
         distributor = "Naxos"
 
@@ -103,5 +103,5 @@ class NaxosVendorNewCodingImporter(GenericImporter):
         else:
             self.add_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost,
                          price)
-            self.update_price_code(upc, price_code)
+            # self.update_price_code(upc, price_code)
             print("add")
