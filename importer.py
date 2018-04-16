@@ -1,6 +1,7 @@
 import MySQLdb
 from importers.factory import factory
 
+
 db = MySQLdb.connect("localhost", "root", "76trombones", "weberp")
 if __name__ == "__main__":
     import csv
@@ -16,7 +17,8 @@ if __name__ == "__main__":
     commit = True if (len(argv) > 3 and argv[3] == "commit") else False
     verify = True if (len(argv) > 3 and argv[3] == "verify") else False
 
-    with open(filename, 'r', encoding='utf-8') as csvfile:
+
+    with open(filename, 'r', encoding='latin_1') as csvfile:
         csvin = csv.reader(csvfile)
         for row in csvin:
             importer.execute_row(row)
@@ -26,3 +28,4 @@ if __name__ == "__main__":
 
     if commit:
         importer.commit()
+
