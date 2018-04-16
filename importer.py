@@ -15,11 +15,17 @@ if __name__ == "__main__":
     filename = argv[2]
 
     commit = True if (len(argv) > 3 and argv[3] == "commit") else False
+    verify = True if (len(argv) > 3 and argv[3] == "verify") else False
+
 
     with open(filename, 'r', encoding='latin_1') as csvfile:
         csvin = csv.reader(csvfile)
         for row in csvin:
             importer.execute_row(row)
+            if verify:
+                importer.verify(row)
+                break
 
     if commit:
         importer.commit()
+

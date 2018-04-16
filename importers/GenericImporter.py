@@ -116,9 +116,6 @@ class GenericImporter():
         elif cost != 0:
             self.update_pricing(cost, price, upc)
 
-    def delete_row(self):
-        pass
-
     def get_sales_price(self, cost):
         return int(float(cost) * 1.67 + 0.05) - 0.01
 
@@ -139,3 +136,11 @@ class GenericImporter():
                                 price_code = %s
                                 WHERE inventory_id = %s """,
                            (price_code, inventory_id))
+
+    def verify(self, row_dict):
+        print("{:<15} {:<15}".format('Key', 'Value'))
+        for k, v in row_dict.items():
+            print("{:<15} {:<15}".format(k, v))
+
+    def get_row(self, row):
+        print("Not Implemented")
