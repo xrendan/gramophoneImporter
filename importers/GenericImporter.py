@@ -137,10 +137,14 @@ class GenericImporter():
                                 WHERE inventory_id = %s """,
                            (price_code, inventory_id))
 
-    def verify(self, row_dict):
-        print("{:<15} {:<15}".format('Key', 'Value'))
-        for k, v in row_dict.items():
-            print("{:<15} {:<15}".format(k, v))
+    def verify(self, row):
+        row_dict = self.get_row(row)
+        try:
+            print("{:<15} {:<15}".format('Key', 'Value'))
+            for k, v in row_dict.items():
+                print("{:<15} {:<15}".format(k, v))
+        except:
+            print("row_dict probably isn't implemented")
 
     def get_row(self, row):
         print("Not Implemented")
