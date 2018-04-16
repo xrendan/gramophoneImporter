@@ -80,13 +80,36 @@ class NaxosMonthlyCatalogueUpdater(GenericImporter):
 
 
 class NaxosVendorNewCodingImporter(GenericImporter):
-    # TODO DO NOT USE!!!!!!!!!!!!!!!!!!!!!!!!!
     def __init__(self, db):
         super().__init__(db)
 
+    def get_row(self, row):
+        year, _, label, cd_number, upc, composer, title, artist, _, medium, cost, blurb, *_ = row
+        row_dict = dict()
+        row_dict["year"] = year
+        row_dict["label"] = label
+        row_dict["cd_number"] = cd_number
+        row_dict["upc"] = upc
+        row_dict["composer"] = composer
+        row_dict["title"] = title
+        row_dict["artist"] = artist
+        row_dict["medium"] = medium
+        row_dict["cost"] = cost
+
+        return row_dict
+
     def execute_row(self, row):
         super().execute_row(row)
-        year, _, _, label, cd_number, upc, composer, title, artist, _, medium, cost, blurb, *_ = row
+        row_dict = self.get_row(row)
+        year = row_dict["year"]
+        label = row_dict["label"]
+        cd_number = row_dict["cd_number"]
+        upc = row_dict["upc"]
+        composer = row_dict["composer"]
+        title = row_dict["title"]
+        artist = row_dict["artist"]
+        medium = row_dict["medium"]
+        cost = row_dict["cost"]
 
         distributor = "Naxos"
 
