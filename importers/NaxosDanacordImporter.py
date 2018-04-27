@@ -6,7 +6,7 @@ class NaxosDanacordImporter(GenericImporter):
         super().__init__(db)
 
     def get_row(self, row):
-        _, label, cd_number, upc, composer, title, artist, _, medium, year, cost, price_code, *_ = row
+        _, label, cd_number, upc, composer, title, artist, _, medium, year, cost, _, price_code, *_ = row
         row_dict = dict()
         row_dict["year"] = year
         row_dict["label"] = label
