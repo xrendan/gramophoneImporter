@@ -22,6 +22,7 @@ if __name__ == "__main__":
         csvin = csv.reader(csvfile)
         for idx, row in enumerate(csvin):
             importer.execute_row(row)
+            print(idx)
             if verify:
                 importer.verify(row)
                 if idx == 1:
