@@ -18,13 +18,14 @@ if __name__ == "__main__":
     verify = True if (len(argv) > 3 and argv[3] == "verify") else False
 
 
-    with open(filename, 'r', encoding='latin_1') as csvfile:
+    with open(filename, 'r', encoding='utf-8-sig') as csvfile:
         csvin = csv.reader(csvfile)
-        for row in csvin:
+        for idx, row in enumerate(csvin):
             importer.execute_row(row)
             if verify:
                 importer.verify(row)
-                break
+                if idx == 1:
+                    break
 
     if commit:
         importer.commit()
