@@ -1,3 +1,4 @@
+from importers.NaxosDanacordImporter import NaxosDanacordImporter
 from importers.NaxosMonthlyImporter import NaxosMonthlyImporter
 from importers.NaxosFullImporter import *
 from importers.NaxosMonthlyUpcAdder import NaxosMonthlyUpcAdder
@@ -26,6 +27,8 @@ def factory(import_type, db):
     if import_type == "Universal_Price_Code": return UniversalPriceCodeUpdater(db)
     if import_type == "Naxos_Monthly_Catalogue": return NaxosMonthlyCatalogueUpdater(db)
     if import_type == "New_Naxos_Vendor": return NaxosVendorNewCodingImporter(db)
+    if import_type == "Naxos_Danacord": return NaxosDanacordImporter(db)
+
 
 
     else:
