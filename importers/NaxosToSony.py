@@ -9,7 +9,7 @@ class NaxosToSonyImporter(GenericImporter):
         # _, label, cd_number, upc, composer, title, artist, _, medium, year, cost, _, price_code, *_ = row
         artist, title, cd_number, upc, cost, _, medium, label, *_ = row
         row_dict = dict()
-        row_dict["year"] = None
+        row_dict["year"] = 0
         row_dict["label"] = label
         row_dict["cd_number"] = cd_number
         row_dict["upc"] = upc
