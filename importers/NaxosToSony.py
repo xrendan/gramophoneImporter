@@ -33,7 +33,6 @@ class NaxosToSonyImporter(GenericImporter):
         artist = row_dict["artist"]
         medium = row_dict["medium"]
         cost = row_dict["cost"]
-        price_code = row_dict["price_code"]
 
         distributor = "SonyBMG"
 
@@ -45,10 +44,8 @@ class NaxosToSonyImporter(GenericImporter):
         if self.check_upc(upc):
             self.update_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost,
                             price)
-            self.update_price_code(upc, price_code)
             print("update")
         else:
             self.add_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost,
                          price)
-            self.update_price_code(upc, price_code)
             print("add")
