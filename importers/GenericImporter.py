@@ -116,6 +116,21 @@ class GenericImporter():
         elif cost != 0:
             self.update_pricing(cost, price, upc)
 
+    def update_distributor(self, upc, cost, price, distributor_id, label_id, cd_number):
+        self.c.execute("""UPDATE inventory SET
+                    distributor_cd_number = %s,
+                    label_id = %s,
+                    distributor_id = %s,
+                    updated = NOW()
+                    WHERE upc = %s """,
+                       (cd_number, label_id, distributor_id, upc))
+
+        if not self.c.rowcount:
+            print(f"failed update on upc {upc}")
+        elif cost != 0:
+            self.update_pricing(cost, price, upc)
+
+
     def get_sales_price(self, cost):
         return int(float(cost) * 1.67 + 0.05) - 0.01
 
