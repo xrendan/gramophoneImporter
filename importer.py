@@ -25,8 +25,7 @@ if __name__ == "__main__":
             print(idx)
             if verify:
                 importer.verify(row)
-                if idx == 1:
-                    break
+                break
 
     if commit:
         importer.commit()
