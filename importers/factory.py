@@ -31,6 +31,8 @@ def factory(import_type, db):
     if import_type == "New_Naxos_Vendor": return NaxosVendorNewCodingImporter(db)
     if import_type == "Naxos_Danacord": return NaxosDanacordImporter(db)
     if import_type == "Naxos_to_Sony": return NaxosToSonyImporter(db)
+    if import_type == "Ultra_New_Naxos_Vendor": return NaxosVendorNewJulyCodingImporter(db)
+
 
 
     else:
