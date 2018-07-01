@@ -31,6 +31,22 @@ class NaxosVendorCodingImporter(GenericImporter):
     def __init__(self, db):
         super().__init__(db)
 
+    def get_row(self, row):
+        year, upc, cd_number, composer, title, artist, _, medium, _, label, cost, _, price_code, blurb, *_ = row
+        row_dict = dict()
+        row_dict["year"] = year
+        row_dict["label"] = label
+        row_dict["cd_number"] = cd_number
+        row_dict["upc"] = upc
+        row_dict["composer"] = composer
+        row_dict["title"] = title
+        row_dict["artist"] = artist
+        row_dict["medium"] = medium
+        row_dict["cost"] = cost
+
+        return row_dict
+
+
     def execute_row(self, row):
         super().execute_row(row)
         year, upc, cd_number, composer, title, artist, _, medium, _, label, cost, _, price_code, blurb, *_ = row
