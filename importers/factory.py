@@ -4,6 +4,7 @@ from importers.NaxosFullImporter import *
 from importers.NaxosMonthlyUpcAdder import NaxosMonthlyUpcAdder
 from importers.NaxosFullUpcAdder import NaxosFullUpcAdder
 from importers.NaxosToSony import NaxosToSonyImporter
+from importers.OutsideDeleter import OutsideDeleter
 from importers.OutsideImporter import OutsideImporter
 from importers.NaxosDeleter import NaxosDeleter, NewNaxosDeleter
 from importers.SonyPriceChanger import SonyPriceChanger
@@ -32,6 +33,8 @@ def factory(import_type, db):
     if import_type == "Naxos_Danacord": return NaxosDanacordImporter(db)
     if import_type == "Naxos_to_Sony": return NaxosToSonyImporter(db)
     if import_type == "Ultra_New_Naxos_Vendor": return NaxosVendorNewJulyCodingImporter(db)
+    if import_type == "Outside_Deleter": return OutsideDeleter(db)
+
 
 
 
