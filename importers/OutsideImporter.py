@@ -18,7 +18,7 @@ class OutsideImporter(GenericImporter):
         price = self.get_sales_price(cost)
 
         if self.check_upc(upc):
-            self.update_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
+            # self.update_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
             print("update")
         else:
             self.add_row(title, upc, medium_id, cd_number, composer, artist, year, label_id, distributor_id, cost, price)
