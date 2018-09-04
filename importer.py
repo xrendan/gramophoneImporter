@@ -15,15 +15,24 @@ if __name__ == "__main__":
 
     commit = True if (len(argv) > 3 and argv[3] == "commit") else False
     verify = True if (len(argv) > 3 and argv[3] == "verify") else False
-
-    with open(filename, 'r', encoding='utf-8-sig') as csvfile:
-        csvin = csv.reader(csvfile)
-        for idx, row in enumerate(csvin):
-            importer.execute_row(row)
-            print(idx)
-            if verify:
-                importer.verify(row)
-                break
+    try:
+        with open(filename, 'r', encoding='utf-8-sig') as csvfile:
+            csvin = csv.reader(csvfile)
+            for idx, row in enumerate(csvin):
+                importer.execute_row(row)
+                print(idx)
+                if verify:
+                    importer.verify(row)
+                    break
+    except UnicodeDecodeError:
+        with open(filename, 'r', encoding='latin-1') as csvfile:
+            csvin = csv.reader(csvfile)
+            for idx, row in enumerate(csvin):
+                importer.execute_row(row)
+                print(idx)
+                if verify:
+                    importer.verify(row)
+                    break
 
     if commit:
         importer.commit()
