@@ -11,6 +11,7 @@ from importers.SonyPriceChanger import SonyPriceChanger
 from importers.WarnerDistributorChanger import WarnerDistributorChanger
 from importers.NaxosGuildImporter import NaxosGuildImporter
 from importers.UniversalImporter import *
+from importers.BelvedereImporter import BelvedereImporter
 
 
 def factory(import_type, db):
@@ -34,9 +35,7 @@ def factory(import_type, db):
     if import_type == "Naxos_to_Sony": return NaxosToSonyImporter(db)
     if import_type == "Ultra_New_Naxos_Vendor": return NaxosVendorNewJulyCodingImporter(db)
     if import_type == "Outside_Deleter": return OutsideDeleter(db)
-
-
-
+    if import_type == "Belvedere": return BelvedereImporter(db)
 
     else:
         raise ValueError
